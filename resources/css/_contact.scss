@@ -1,0 +1,180 @@
+.contact-page {
+  @extend %flex-column-center;
+  color: $color-dark;
+  gap: $g-4;
+
+  @media only screen and (min-width: 650px) {
+    gap: $g-5;
+  }
+
+  @media only screen and (min-width: 750px) {
+    gap: $g-6;
+  }
+
+  .contact-container {
+    display: grid;
+    gap: $g-4;
+
+    @media only screen and (min-width: 750px) {
+      display: flex;
+      gap: $g-6;
+    }
+
+    .personal-info {
+      @extend %flex-column;
+      gap: $g-3;
+      text-align: center;
+      font-size: $fs-2;
+      color: $color-secondary;
+
+      @media only screen and (min-width: 650px) {
+        font-size: $fs-3;
+      }
+
+      @media only screen and (min-width: 850px) {
+        font-size: $fs-4;
+      }
+
+      h2 {
+        font-size: $fs-4;
+        line-height: 1.3;
+
+        @media only screen and (min-width: 650px) {
+          font-size: $fs-5;
+        }
+
+        @media only screen and (min-width: 850px) {
+          font-size: $fs-6;
+        }
+      }
+    }
+
+    form {
+      @extend %flex-column;
+      gap: $g-4;
+      background-color: $color-dark;
+      color: $color-primary;
+      padding: $g-6;
+      border-radius: $border-radius;
+      width: 300px;
+
+      @media only screen and (min-width: 475px) {
+        width: 400px;
+      }
+
+      @media only screen and (min-width: 575px) {
+        width: 500px;
+      }
+
+      @media only screen and (min-width: 750px) {
+        width: 350px;
+      }
+
+      @media only screen and (min-width: 900px) {
+        width: 400px;
+      }
+
+      @media only screen and (min-width: 1000px) {
+        width: 500px;
+      }
+
+      @media only screen and (min-width: 1101px) {
+        width: auto;
+      }
+
+      h2 {
+        font-size: $fs-4;
+        line-height: 1.3;
+        text-align: center;
+
+        @media only screen and (min-width: 650px) {
+          font-size: $fs-5;
+        }
+
+        @media only screen and (min-width: 850px) {
+          font-size: $fs-6;
+        }
+      }
+
+      .input-container {
+        display: grid;
+        gap: $g-4;
+
+        @media only screen and (min-width: 1101px) {
+          grid-template-areas:
+            "name phone"
+            "email email"
+            "subject subject"
+            "comment comment";
+
+          .grid-area-name {
+            grid-area: name;
+          }
+
+          .grid-area-phone {
+            grid-area: phone;
+          }
+
+          .grid-area-email {
+            grid-area: email;
+          }
+
+          .grid-area-subject {
+            grid-area: subject;
+          }
+
+          .grid-area-comment {
+            grid-area: comment;
+          }
+        }
+
+        .form-input {
+          @extend %flex-column;
+          font-size: $fs-1;
+
+          input,
+          textarea {
+            border: 2px solid $color-primary;
+            padding: $g-3;
+            font-family: $font-family;
+            border-radius: $border-radius;
+
+            @media only screen and (min-width: 650px) {
+              font-size: $fs-2;
+            }
+
+            @media only screen and (min-width: 850px) {
+              font-size: $fs-3;
+            }
+          }
+
+          @media only screen and (min-width: 650px) {
+            font-size: $fs-2;
+          }
+
+          @media only screen and (min-width: 850px) {
+            font-size: $fs-3;
+          }
+
+          textarea {
+            resize: vertical;
+          }
+        }
+      }
+    }
+
+    input[type="submit"] {
+      background-color: $color-primary;
+      padding: $g-3;
+      color: $color-dark;
+      border-radius: $border-radius;
+      font-size: $fs-3;
+      transition: $tr-color, background-color 500ms;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-light;
+      }
+    }
+  }
+}

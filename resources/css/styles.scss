@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+$color-primary: #54e2c4;
+$color-secondary: #a61e73;
+$color-dark: #343434;
+$color-light: #fff;
+
+$font-family: "Quicksand", sans-serif;
+
+$fs-0: 1rem;
+$fs-1: 1.4rem;
+$fs-2: 1.8rem;
+$fs-3: 2rem;
+$fs-4: 2.5rem;
+$fs-5: 3rem;
+$fs-6: 4rem;
+$fs-7: 5rem;
+
+$fw-1: 300;
+$fw-2: 400;
+$fw-3: 500;
+$fw-4: 600;
+$fw-5: 700;
+
+$tr-color: color 500ms;
+$tr-transform: transform 500ms;
+
+$g-1: 0.5rem;
+$g-2: 0.75rem;
+$g-3: 1rem;
+$g-4: 1.5rem;
+$g-5: 2rem;
+$g-6: 3rem;
+
+$border-radius: 5px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: $font-family;
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+}
+
+.grid-area-header {
+  grid-area: header;
+}
+
+.grid-area-main {
+  grid-area: main;
+}
+
+.grid-area-footer {
+  grid-area: footer;
+}
+
+%flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $g-1;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: $g-5;
+
+  @media only screen and (min-width: 650px) {
+    padding-inline: $g-6;
+  }
+}
+
+// Navbar-Section
+.navbar {
+  @extend %flex-column-center;
+
+  @media only screen and (min-width: 650px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+%dark-bg {
+  background-color: $color-dark;
+  color: $color-primary;
+}
+
+%light-bg {
+  background-color: $color-light;
+  color: $color-secondary;
+}
+
+.fixed-nav-bar,
+.fixed-footer {
+  @extend %dark-bg;
+}
+
+%link-resets {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo {
+  @extend %link-resets;
+
+  font-weight: $fw-5;
+  font-size: $fs-5;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  transition: $tr-color, $tr-transform;
+
+  &:hover {
+    transform: scale(1.1);
+    color: $color-secondary;
+  }
+
+  @media only screen and (min-width: 750px) {
+    font-size: $fs-6;
+    line-height: 1.1;
+  }
+}
+
+.navbar {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: $g-4;
+
+    @media only screen and (min-width: 550px) {
+      gap: $g-5;
+    }
+
+    @media only screen and (min-width: 850px) {
+      gap: $g-6;
+    }
+
+    a {
+      @extend %link-resets;
+
+      font-weight: $fw-3;
+      font-size: $fs-1;
+      letter-spacing: 1px;
+      position: relative;
+      transition: $tr-color;
+      text-transform: uppercase;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: $color-secondary;
+        transform: scaleX(0);
+        transition: $tr-transform;
+        transform-origin: right bottom;
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+        transform-origin: left bottom;
+      }
+
+      &:hover {
+        color: $color-secondary;
+      }
+
+      @media only screen and (min-width: 750px) {
+        font-size: $fs-2;
+      }
+
+      @media only screen and (min-width: 850px) {
+        font-size: $fs-3;
+      }
+    }
+  }
+}
+
+// Footer-Section
+.social-links {
+  @extend %flex-column-center;
+  gap: 0;
+  font-size: $fs-1;
+  font-weight: $fs-3;
+
+  @media only screen and (min-width: 650px) {
+    font-size: $fs-2;
+  }
+
+  @media only screen and (min-width: 850px) {
+    font-size: $fs-3;
+  }
+
+  .social-text {
+    font-size: $fs-1;
+    font-weight: $fw-3;
+
+    @media only screen and (min-width: 650px) {
+      font-size: $fs-2;
+    }
+
+    @media only screen and (min-width: 850px) {
+      font-size: $fs-3;
+    }
+  }
+
+  .social-links-list {
+    display: flex;
+    gap: $g-4;
+
+    @media only screen and (min-width: 650px) {
+      gap: $g-5;
+    }
+
+    @media only screen and (min-width: 850px) {
+      gap: $g-6;
+    }
+
+    a {
+      @extend %link-resets;
+
+      font-size: $fs-4;
+      transition: $tr-color, $tr-transform;
+      line-height: 1.5;
+
+      &:hover {
+        transform: scale(1.5);
+        color: $color-secondary;
+      }
+
+      @media only screen and (min-width: 650px) {
+        font-size: $fs-5;
+      }
+
+      @media only screen and (min-width: 850px) {
+        font-size: $fs-6;
+      }
+    }
+  }
+}
+
+%underline {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: $color-dark;
+}
+
+.section-header {
+  font-size: $fs-5;
+  font-weight: $fw-5;
+  text-transform: uppercase;
+  line-height: 1.1;
+  position: relative;
+
+  @media only screen and (min-width: 650px) {
+    font-size: $fs-6;
+  }
+
+  @media only screen and (min-width: 850px) {
+    font-size: $fs-7;
+  }
+
+  &::before {
+    @extend %underline;
+  }
+}
+
+@import "home", "about-me", "work", "contact";

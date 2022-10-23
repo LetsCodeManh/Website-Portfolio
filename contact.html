@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Portfolio - Home Page</title>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+
+    <!-- Links & Script -->
+    <link rel="stylesheet" href="/public/css/styles.min.css" />
+    <script src="/public/tota11y-0.1.6/build/tota11y.min.js" defer></script>
+  </head>
+  <body>
+    <header class="fixed-nav-bar grid-area-header" role="navbar">
+      <nav class="navbar container">
+        <a class="logo" href="/index.html">Manh Nguyen</a>
+        <ul role="navbar-list">
+          <li role="navbar-list-item"><a href="/index.html">Home</a></li>
+          <li role="navbar-list-item"><a href="/about-me.html">About Me</a></li>
+          <li role="navbar-list-item"><a href="/work.html">Work</a></li>
+          <li role="navbar-list-item"><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="contact-page" class="grid-area-main">
+      <div class="container contact-page">
+        <h1 class="section-header">Contact</h1>
+        <div class="contact-container">
+          <div class="personal-info" role="personal information">
+            <h2>Personal Information</h2>
+            <div>
+              <p>Bahnhofsallee 6</p>
+              <p>37081 Goettingen</p>
+              <p>Germany</p>
+            </div>
+            <p>Telephone: +49 176 21437917</p>
+            <p>Email: manh.ng@icloud.com</p>
+          </div>
+          <form action="#" role="contact form">
+            <h2>Contact Form</h2>
+            <div class="input-container">
+              <div class="grid-area-name form-input">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Manh Nguyen"
+                  required
+                />
+              </div>
+
+              <div class="grid-area-email form-input">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="name"
+                  placeholder="manh.ng@icloud.com"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  required
+                />
+              </div>
+
+              <div class="grid-area-phone form-input">
+                <label for="tel">Phonenumber</label>
+                <input
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder="+49 176 21437917"
+                  pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}"
+                  required
+                />
+              </div>
+
+              <div class="grid-area-subject form-input">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  placeholder="Which topic are we talking about?"
+                  required
+                />
+              </div>
+
+              <div class="grid-area-comment form-input">
+                <label for="comment">Comment</label>
+                <textarea
+                  name="comment"
+                  id="comment"
+                  placeholder="How can I help you?"
+                  maxlength="500"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <input type="submit" value="Send message" class="contact-button" />
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fixed-footer grid-area-footer" role="social-media-links">
+      <div class="social-links container">
+        <p class="social-text">Find me on:</p>
+        <div class="social-links-list">
+          <a role="social-media-link-github" href="#Github"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a role="social-media-link-twitter" href="#Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a role="social-media-link-linkedin" href="#LinkendIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- https://randomuser.me/api/portraits/men/11.jpg -->

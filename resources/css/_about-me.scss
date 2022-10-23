@@ -1,0 +1,53 @@
+.about-me-page {
+  @extend %flex-column-center;
+  color: $color-dark;
+  gap: $g-4;
+
+  @media only screen and (min-width: 650px) {
+    gap: $g-5;
+  }
+
+  @media only screen and (min-width: 750px) {
+    gap: $g-6;
+  }
+
+  article {
+    text-align: center;
+    @extend %flex-column;
+    gap: $g-2;
+
+    p {
+      font-size: $fs-1;
+      font-weight: $fw-3;
+
+      @media only screen and (min-width: 650px) {
+        font-size: $fs-2;
+      }
+
+      @media only screen and (min-width: 750px) {
+        font-size: $fs-3;
+      }
+
+      @media only screen and (min-width: 850px) {
+        font-size: $fs-4;
+      }
+    }
+
+    .article-autor {
+      font-size: $fs-2;
+      font-weight: $fw-5;
+
+      @media only screen and (min-width: 650px) {
+        font-size: $fs-3;
+      }
+
+      @media only screen and (min-width: 750px) {
+        font-size: $fs-4;
+      }
+
+      @media only screen and (min-width: 850px) {
+        font-size: $fs-5;
+      }
+    }
+  }
+}

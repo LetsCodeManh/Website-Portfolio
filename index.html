@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Portfolio - Home Page</title>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+
+    <!-- Links & Script -->
+    <link rel="stylesheet" href="/public/css/styles.min.css" />
+    <script src="/public/tota11y-0.1.6/build/tota11y.min.js" defer></script>
+  </head>
+  <body>
+    <header class="fixed-nav-bar grid-area-header" role="navbar">
+      <nav class="navbar container">
+        <a class="logo" href="/index.html">Manh Nguyen</a>
+        <ul role="navbar-list">
+          <li role="navbar-list-item"><a href="/index.html">Home</a></li>
+          <li role="navbar-list-item"><a href="/about-me.html">About Me</a></li>
+          <li role="navbar-list-item"><a href="/work.html">Work</a></li>
+          <li role="navbar-list-item"><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main role="home-page" class="grid-area-main">
+      <div class="container home-page">
+        <img
+          src="https://randomuser.me/api/portraits/men/3.jpg"
+          alt="A Person's Portraits"
+          role="A Person's Portraits"
+        />
+        <div class="home-page-textbox" role="Short introduction">
+          <h1 class="home-page-header">Hi, Nice to meet you!</h1>
+          <p class="home-page-subheader">
+            My name is <span>Manh Nguyen!</span> <br />
+            I am a <span>&lt;web&gt;</span> developer from Germany.
+          </p>
+          <a href="/work.html">Check out some of my codes.</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fixed-footer grid-area-footer" role="social-media-links">
+      <div class="social-links container">
+        <p class="social-text">Find me on:</p>
+        <div class="social-links-list">
+          <a role="social-media-link-github" href="#Github"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a role="social-media-link-twitter" href="#Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a role="social-media-link-linkedin" href="#LinkendIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
