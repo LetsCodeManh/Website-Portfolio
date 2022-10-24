@@ -209,7 +209,7 @@ body {
   @extend %flex-column-center;
   gap: 0;
   font-size: $fs-1;
-  font-weight: $fs-3;
+  font-weight: $fw-3;
 
   @media only screen and (min-width: 650px) {
     font-size: $fs-2;
